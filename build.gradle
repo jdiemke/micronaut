@@ -51,7 +51,7 @@ shadowJar {
 
 run.jvmArgs('-noverify', '-XX:TieredStopAtLevel=1')
 
-mainClassName = "micronaut.Application"
+mainClassName = "io.github.jdiemke.micronaut.Application"
 
 tasks.withType(JavaCompile){
     options.encoding = "UTF-8"

@@ -21,9 +21,9 @@ public class HelloControllerTest {
     @Test
     @DisplayName("Should return \"Hello World\" when accessing /hello endpoint")
     public void shouldReturnHelloWorld() throws Exception {
-        final String result = client.toBlocking().retrieve(HttpRequest.GET("/hello"), String.class);
+        final Message result = client.toBlocking().retrieve("/hello", Message.class);
 
-        Assertions.assertEquals("Hello World!", result);
+        Assertions.assertEquals("Hello World!", result.getMessage());
     }
 
 }

@@ -7,8 +7,10 @@ import io.micronaut.http.annotation.Get;
 public class HelloController {
 
     @Get("/")
-    public String helloWorld() {
-        return "Hello World!";
+    public Message helloWorld() {
+        Message message = new Message();
+        message.setMessage("Hello World!");
+        return message;
     }
 
 }
